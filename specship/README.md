@@ -32,3 +32,7 @@ SpecShip builds on two other plugins. Install all three:
 ## Skills
 
 None yet.
+
+## License
+
+MIT. See [LICENSE](../LICENSE).
