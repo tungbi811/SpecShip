@@ -92,4 +92,4 @@ Report the path, each actor with the use cases it starts, and anything left open
 - Suggest a commit message naming the BRs whose use cases were added or changed: `docs(BR-XXX): use case diagram`.
 - Tell the user how to see it: open `docs/use-cases/` on GitHub, or open the file in VS Code 1.121 or later and press
   `Cmd+Shift+V` (`Ctrl+Shift+V` on Windows and Linux).
-- Name the next step: the entity model, the nouns the use cases work on. SpecShip does not have that step yet.
+- Name the next step: `/entity-model`, the nouns the use cases work on.
