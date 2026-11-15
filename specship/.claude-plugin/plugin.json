@@ -2,7 +2,7 @@
   "name": "specship",
   "displayName": "SpecShip",
   "description": "Spec to ship: spec-driven development for Claude Code, with AIUP for specs and docs and ECC for implementation",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": {
     "name": "tungbi811",
     "url": "https://github.com/tungbi811"
