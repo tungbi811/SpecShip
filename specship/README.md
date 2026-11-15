@@ -2,20 +2,16 @@
 
 Spec to ship: spec-driven development for Claude Code.
 
-- **Spec and doc phases** run on [aiup-core](https://github.com/AI-Unified-Process/marketplace/tree/main/aiup-core)
-- **Implementation** runs on [ECC](https://github.com/affaan-m/ECC)
-- **SpecShip** adds what sits between and around them
+- **Specs** run on SpecShip: from the product to use cases with acceptance criteria
+- **Implementation** runs on [ECC](https://github.com/affaan-m/ECC): from one use case to reviewed code
 
-> Status: 0.7.0. Skills are added one planning step at a time.
+> Status: 0.8.0.
 
 ## Install
 
-SpecShip builds on two other plugins. Install all three:
+SpecShip hands implementation to ECC. Install both:
 
 ```text
-/plugin marketplace add ai-unified-process/marketplace
-/plugin install aiup-core@ai-unified-process-marketplace
-
 /plugin marketplace add affaan-m/ECC
 /plugin install ecc@ecc
 
@@ -40,6 +36,19 @@ SpecShip builds on two other plugins. Install all three:
 | [`/entity-model`](skills/entity-model/SKILL.md) | Fifth step. Grills you about the nouns the use cases work on, then writes `docs/entity-model.md`: a Mermaid ER diagram and, per entity, its meaning, attributes, states, relationships, rules, and use cases. One model for the project, grown by every BR |
 | [`/use-case-spec`](skills/use-case-spec/SKILL.md) | Sixth step. Fills in one use case: actor, trigger, preconditions, main flow, alternative flows, exceptions, postconditions, and acceptance criteria in Given/When/Then. Asks only what the BR, diagram, and entity model leave open |
 | [`/grill-me`](skills/grill-me/SKILL.md) | Interviews you one question at a time until a plan is clear. Used by every step above. From [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
+
+## Implementation
+
+Once a use case is specified, implement it with ECC:
+
+1. `/ecc:plan docs/use-cases/UC-001-clock-in-and-out.md`
+2. Read the plan, then reply `yes`, or `modify: …`
+3. ECC implements the plan
+4. `/code-review`
+5. Commit: `feat(UC-001): …`
+
+When a business question comes up that the use case does not answer, update it with `/use-case-spec UC-001` first,
+then continue.
 
 ## License
 

@@ -9,7 +9,7 @@
     {
       "name": "specship",
       "source": "./specship",
-      "description": "Spec to ship: spec-driven development for Claude Code, with AIUP for specs and docs and ECC for implementation"
+      "description": "Spec to ship: spec-driven development for Claude Code, with ECC for implementation"
     }
   ]
 }

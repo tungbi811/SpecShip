@@ -155,5 +155,5 @@ Report the path, the sections written or changed, and anything left open. Then:
 - Remind the user that someone from the business side reviews the use case, and that they set Status to `reviewed`
   after it. When a reviewed or implemented use case changed, it needs that review again, and the tests of the changed
   criteria need to follow.
-- Name the next step: `/use-case-spec` for the next use case, or implementing this one. SpecShip does not have the
-  implementation step yet.
+- Name the next step: `/use-case-spec` for the next use case, or implementing this one with ECC:
+  `/ecc:plan docs/use-cases/UC-XXX-<slug>.md`, with the real path of the use case.
