@@ -93,4 +93,4 @@ Write the file as soon as the grilling ends. Do not ask for approval: the grilli
 ## 4. Hand off
 
 Report the path, which sections were written or changed, and any open lines. Then name the next step:
-`/requirements PRODUCT.md` from aiup-core, which turns `PRODUCT.md` into the requirements catalog.
+`/business-requirements`, which slices `PRODUCT.md` into the first release (BR-001).
