@@ -43,7 +43,7 @@ cases, take the lowest number first.
 | # | State | Next |
 |---|-------|------|
 | 1 | No `PRODUCT.md` | `/kickoff` |
-| 2 | No BR | `/business-requirements` |
+| 2 | No BR and no use case | `/business-requirements`; in a project that already has code, `/reverse-engineer` first |
 | 3 | A BR has no `## Related Use Cases` section | `/breakdown BR-XXX` |
 | 4 | No diagram, or a use case is missing from it | `/use-case-diagram` |
 | 5 | No entity model, or a use case is in no `Used by` line | `/entity-model` |

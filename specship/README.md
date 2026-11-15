@@ -5,7 +5,7 @@ Spec to ship: spec-driven development for Claude Code.
 - **Specs** run on SpecShip: from the product to use cases with acceptance criteria
 - **Implementation** runs on [ECC](https://github.com/affaan-m/ECC): from one use case to reviewed code
 
-> Status: 0.9.0.
+> Status: 0.10.0.
 
 ## Install
 
@@ -35,6 +35,7 @@ SpecShip hands implementation to ECC. Install both:
 | [`/use-case-diagram`](skills/use-case-diagram/SKILL.md) | Fourth step. Grills you about who takes part in each use case, then draws the actors and use cases as a Mermaid diagram in `docs/use-cases/README.md`. GitHub and the VS Code preview show it with nothing to install |
 | [`/entity-model`](skills/entity-model/SKILL.md) | Fifth step. Grills you about the nouns the use cases work on, then writes `docs/entity-model.md`: a Mermaid ER diagram and, per entity, its meaning, attributes, states, relationships, rules, and use cases. One model for the project, grown by every BR |
 | [`/use-case-spec`](skills/use-case-spec/SKILL.md) | Sixth step. Fills in one use case: actor, trigger, preconditions, main flow, alternative flows, exceptions, postconditions, and acceptance criteria in Given/When/Then. Asks only what the BR, diagram, and entity model leave open |
+| [`/reverse-engineer`](skills/reverse-engineer/SKILL.md) | For a project that already has code, after `/kickoff`. Writes down what one bounded context does today: the entity model from the database, each use case filled in from the code as a `draft` with its source and confidence, and the diagram. Asks only what the code cannot answer |
 | [`/grill-me`](skills/grill-me/SKILL.md) | Interviews you one question at a time until a plan is clear. Used by every step above. From [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
 | [`/next`](skills/next/SKILL.md) | Any time. Reads the project, shows where it stands, and names the next command and the one after it. Read-only |
 
