@@ -85,7 +85,8 @@ Path: `docs/business-requirements/BR-XXX-<slug>.md`, the slug a few lowercase wo
 - Add `## Quality` (how well: speed, freshness, accuracy, availability, cost, each with a number) and
   `## Constraints` (Technical, Regulatory, Timeline) only when the user stated something for this BR. Limits that
   hold for the whole product belong in `PRODUCT.md`, not here.
-- Leave the `→ UC-XXX` links on In Scope lines to the use case step; never invent use case numbers.
+- Never write the `## Related Use Cases` section or invent use case numbers: `/breakdown` writes them. On an update,
+  keep that section as it is.
 - Write only what the user confirmed or what `PRODUCT.md` states. Never invent numbers, customers, or dates.
 - Use the terms of `PRODUCT.md` and `docs/glossary.md` when it exists, one term per concept.
 - Write in the language of the conversation, unless the user or the project's existing docs set another one.
@@ -102,5 +103,5 @@ Report the path, which sections were written or changed, and any open lines. The
 - Suggest a commit message: `feat(BR-XXX): {name}` for a new BR, `docs(BR-XXX): {what changed}` for an update.
 - Remind the user that someone from the business side (the person who decides what "correct" means) should read the
   BR before use cases are written.
-- Name the next step: turning In Scope into use cases. Until SpecShip has its own step for that, this is AIUP's
-  `/requirements` followed by `/use-case-diagram`.
+- Name the next step: `/breakdown`, which breaks the BR down into use cases. When an update changed the In Scope of a
+  BR that already has `## Related Use Cases`, suggest `/breakdown BR-XXX` to update its list.

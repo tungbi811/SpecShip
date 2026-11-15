@@ -6,7 +6,7 @@ Spec to ship: spec-driven development for Claude Code.
 - **Implementation** runs on [ECC](https://github.com/affaan-m/ECC)
 - **SpecShip** adds what sits between and around them
 
-> Status: 0.3.0. Skills are added one planning step at a time.
+> Status: 0.4.0. Skills are added one planning step at a time.
 
 ## Install
 
@@ -35,7 +35,8 @@ SpecShip builds on two other plugins. Install all three:
 |-------|--------------|
 | [`/kickoff`](skills/kickoff/SKILL.md) | First step of a project. Grills you about the product, then writes `PRODUCT.md` at the project root |
 | [`/business-requirements`](skills/business-requirements/SKILL.md) | Second step. Grills you about the next release or initiative, then writes `docs/business-requirements/BR-XXX-<slug>.md`: goal, success metrics, in scope, out of scope |
-| [`/grill-me`](skills/grill-me/SKILL.md) | Interviews you one question at a time until a plan is clear. Used by `/kickoff`. From [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
+| [`/breakdown`](skills/breakdown/SKILL.md) | Third step. Grills you about the use cases of a BR, then lists them in the BR's Related Use Cases and creates one file per use case in `docs/use-cases/`: metadata filled, every other section an empty template |
+| [`/grill-me`](skills/grill-me/SKILL.md) | Interviews you one question at a time until a plan is clear. Used by every step above. From [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
 
 ## License
 
