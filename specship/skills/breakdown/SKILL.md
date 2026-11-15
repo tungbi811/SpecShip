@@ -38,7 +38,9 @@ clash.
 Draft the list from In Scope: for each use case an id and a short name in the user's words, a verb and an object
 (`Request Leave`, `Load Daily Sales`). On an update, start from the existing list and the In Scope lines that changed.
 
-Run the `grill-me` skill (`specship:grill-me`) with the draft list as the plan to grill. Hold the list to these bars:
+Run the `grill-me` skill (`specship:grill-me`) with the draft list as the plan to grill. Ask only about what the
+project's files leave open or vague, and take what they already state. Never guess: when something is unclear, ask.
+Hold the list to these bars:
 
 | Check | Settled when |
 |-------|--------------|

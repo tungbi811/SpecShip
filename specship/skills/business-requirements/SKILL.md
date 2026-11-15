@@ -44,6 +44,9 @@ Run the `grill-me` skill (`specship:grill-me`) with the run's starting point as 
 - **New initiative:** what changed or what is missing, and which goal or success measure of `PRODUCT.md` it moves.
 - **Update:** what the feedback, demo, or decision was, and which sections it changes. Ask only about those.
 
+Ask only about what `PRODUCT.md` and the existing BRs leave open or vague, and take what they already state. Never
+guess: when something is unclear, ask.
+
 Hold each section to its bar before moving on:
 
 | Section | Settled when |

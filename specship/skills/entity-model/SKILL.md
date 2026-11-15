@@ -44,7 +44,9 @@ From this, list the use cases of the run, and flag every `Used by` id whose use 
 ## 2. Grill
 
 Draft the entities the use cases of the run need, from their names, their BRs, and the existing model. Run the
-`grill-me` skill (`specship:grill-me`) with the draft as the plan to grill. Hold it to these bars:
+`grill-me` skill (`specship:grill-me`) with the draft as the plan to grill. Ask only about what the project's files
+leave open or vague, and take what they already state. Never guess: when something is unclear, ask. Hold the draft to
+these bars:
 
 | Check | Settled when |
 |-------|--------------|
@@ -105,7 +107,8 @@ erDiagram
 - Every rule ends with the BR it came from.
 - The diagram holds entity names and relationships only: `||--||` has one, `||--o{` has many, `}o--||` refers to,
   `}o--o{` many to many, each with a short verb in double quotes. Derived entities stay out of it.
-- An entity table found in the codebase keeps its table name after the entity name: `## Subscription (table: tbl_sub_v3)`.
+- An entity found as a table in the codebase keeps the table name after its own:
+  `## Subscription (table: tbl_sub_v3)`.
 - Write only what the user confirmed or what the project's files state. Never invent attributes, states, or rules.
 - Use the terms of `PRODUCT.md`, the BRs, and `docs/glossary.md`, one term per concept.
 
@@ -132,5 +135,4 @@ Report the path, the entities added or changed, the rules recorded, and anything
 - Suggest a commit message: `docs(BR-XXX): entity model`, naming the BR of the run.
 - Remind the user to review the model with someone from the business side: it is where missing rules show up.
 - List anything to add to a BR's Out of Scope, with the `/business-requirements BR-XXX` run that adds it.
-- Name the next step: filling in the use cases, starting with the one that has the most rules. SpecShip does not have
-  that step yet.
+- Name the next step: `/use-case-spec`, starting with the use case whose entities carry the most rules.

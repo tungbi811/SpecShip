@@ -6,7 +6,7 @@ Spec to ship: spec-driven development for Claude Code.
 - **Implementation** runs on [ECC](https://github.com/affaan-m/ECC)
 - **SpecShip** adds what sits between and around them
 
-> Status: 0.6.0. Skills are added one planning step at a time.
+> Status: 0.7.0. Skills are added one planning step at a time.
 
 ## Install
 
@@ -38,6 +38,7 @@ SpecShip builds on two other plugins. Install all three:
 | [`/breakdown`](skills/breakdown/SKILL.md) | Third step. Grills you about the use cases of a BR, then lists them in the BR's Related Use Cases and creates one file per use case in `docs/use-cases/`: metadata filled, every other section an empty template |
 | [`/use-case-diagram`](skills/use-case-diagram/SKILL.md) | Fourth step. Grills you about who takes part in each use case, then draws the actors and use cases as a Mermaid diagram in `docs/use-cases/README.md`. GitHub and the VS Code preview show it with nothing to install |
 | [`/entity-model`](skills/entity-model/SKILL.md) | Fifth step. Grills you about the nouns the use cases work on, then writes `docs/entity-model.md`: a Mermaid ER diagram and, per entity, its meaning, attributes, states, relationships, rules, and use cases. One model for the project, grown by every BR |
+| [`/use-case-spec`](skills/use-case-spec/SKILL.md) | Sixth step. Fills in one use case: actor, trigger, preconditions, main flow, alternative flows, exceptions, postconditions, and acceptance criteria in Given/When/Then. Asks only what the BR, diagram, and entity model leave open |
 | [`/grill-me`](skills/grill-me/SKILL.md) | Interviews you one question at a time until a plan is clear. Used by every step above. From [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) |
 
 ## License
