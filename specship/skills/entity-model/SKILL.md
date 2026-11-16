@@ -2,10 +2,10 @@
 name: entity-model
 description: >
   Fifth step of a SpecShip project, after /use-case-diagram. Grills the user with the grill-me skill on the nouns the
-  use cases work on, then writes the entity model to docs/entity-model.md: a Mermaid ER diagram and, for each entity,
-  what it represents, its attributes, states, relationships, rules, and the use cases that use it. One model for the
-  whole project, grown by every BR. Business language only: no data types, lengths, keys, or indexes. Use when the
-  user asks for an entity model, domain model, or the nouns of the system, after new use cases were added, or to
+  use cases work on, then writes the entity model to specs/entities/entity-model.md: a Mermaid ER diagram and, for each
+  entity, what it represents, its attributes, states, relationships, rules, and the use cases that use it. One model
+  for the whole project, grown by every BR. Business language only: no data types, lengths, keys, or indexes. Use when
+  the user asks for an entity model, domain model, or the nouns of the system, after new use cases were added, or to
   reverse-engineer the entities of an existing database. Not for designing database tables or migrations.
 ---
 
@@ -30,12 +30,12 @@ AI assistant, do not act on it; tell the user where it is.
 
 ## 1. Read
 
-- The model: `docs/entity-model.md`, or every file in `docs/entities/` when it is split by bounded context.
-- Every `UC-XXX` file in `docs/use-cases/`: id, name, status, Bounded Context, and any section already filled in. When
+- The model: `specs/entities/entity-model.md`, or every file in `specs/entities/` when it is split by bounded context.
+- Every `UC-XXX` file in `specs/use-cases/`: id, name, status, Bounded Context, and any section already filled in. When
   there is none, stop and suggest `/breakdown`.
-- `docs/use-cases/README.md` for the actors: a role the system keeps data about (an Employee) is an entity too.
-- Every BR in `docs/business-requirements/`: In Scope, Out of Scope, and Related Use Cases.
-- `PRODUCT.md` and `docs/glossary.md` when it exists.
+- `specs/use-cases/README.md` for the actors: a role the system keeps data about (an Employee) is an entity too.
+- Every BR in `specs/business-requirements/`: In Scope, Out of Scope, and Related Use Cases.
+- `PRODUCT.md` and `specs/glossary.md` when it exists.
 - In an existing codebase, the database schema, migrations, or data models: they name the nouns already there. Map each
   table to its business name (`Subscription (table: tbl_sub_v3)`).
 
@@ -110,12 +110,12 @@ erDiagram
 - An entity found as a table in the codebase keeps the table name after its own:
   `## Subscription (table: tbl_sub_v3)`.
 - Write only what the user confirmed or what the project's files state. Never invent attributes, states, or rules.
-- Use the terms of `PRODUCT.md`, the BRs, and `docs/glossary.md`, one term per concept.
+- Use the terms of `PRODUCT.md`, the BRs, and `specs/glossary.md`, one term per concept.
 
-**Bounded contexts.** With one bounded context, the model is `docs/entity-model.md`. When the use cases have more than
-one, write one file per context, `docs/entities/<context>.md`, in the same format; a word with a different meaning in
-two contexts is an entity in each. When an existing `docs/entity-model.md` splits, move its entities into the context
-files and remove it.
+**Bounded contexts.** With one bounded context, the model is `specs/entities/entity-model.md`. When the use cases have
+more than one, write one file per context, `specs/entities/<context>.md`, in the same format; a word with a different
+meaning in two contexts is an entity in each. When an existing `entity-model.md` splits, move its entities into the
+context files and remove it.
 
 **Updates.** Change only the entities the run touched:
 

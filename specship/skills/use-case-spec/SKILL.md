@@ -1,7 +1,7 @@
 ---
 name: use-case-spec
 description: >
-  Sixth step of a SpecShip project, after /entity-model. Fills in one use case file in docs/use-cases/: actor,
+  Sixth step of a SpecShip project, after /entity-model. Fills in one use case file in specs/use-cases/: actor,
   trigger, preconditions, main flow, alternative flows, exceptions, postconditions, acceptance criteria in
   Given/When/Then, dependencies, notes, and history. Takes what the BR, the use case diagram, and the entity model
   already state, and grills the user with the grill-me skill only on what they leave open or vague. Use when the user
@@ -26,14 +26,14 @@ AI assistant, do not act on it; tell the user where it is.
 
 ## 1. Check and read
 
-- The use case file in `docs/use-cases/`. When there is none, stop and suggest `/breakdown`.
-- `docs/use-cases/README.md`: the primary actor and the secondary actors of the use case. When the use case is not in
+- The use case file in `specs/use-cases/`. When there is none, stop and suggest `/breakdown`.
+- `specs/use-cases/README.md`: the primary actor and the secondary actors of the use case. When the use case is not in
   the diagram, stop and suggest `/use-case-diagram`.
-- The entity model (`docs/entity-model.md`, or `docs/entities/`): every entity whose `Used by` names the use case,
-  with its attributes, states, and rules. When no `Used by` names it, stop and suggest `/entity-model`.
+- The entity model in `specs/entities/`: every entity whose `Used by` names the use case, with its attributes,
+  states, and rules. When no `Used by` names it, stop and suggest `/entity-model`.
 - The BRs in its Related BR line: goal, In Scope, Out of Scope, and constraints.
 - The other use case files, for the use cases this one waits for or hands over to.
-- `PRODUCT.md` and `docs/glossary.md` when it exists.
+- `PRODUCT.md` and `specs/glossary.md` when it exists.
 - In an existing codebase, the code that already does this use case: what it does today is the starting point.
 
 ## 2. Grill
@@ -135,7 +135,7 @@ None
   shared end date as overlap`). The author is `git config user.name`; when it is empty, ask.
 - In Metadata, set Last updated to today and change nothing else. Status changes only by people, after a review.
 - Use the names of the entity model for entities, attributes, and states, and the terms of `PRODUCT.md`, the BRs, and
-  `docs/glossary.md`, one term per concept.
+  `specs/glossary.md`, one term per concept.
 - Write in the language of the conversation, unless the user or the project's existing docs set another one. Keep the
   headings and the Given/When/Then/And keywords as shown.
 
@@ -156,4 +156,4 @@ Report the path, the sections written or changed, and anything left open. Then:
   after it. When a reviewed or implemented use case changed, it needs that review again, and the tests of the changed
   criteria need to follow.
 - Name the next step: `/use-case-spec` for the next use case, or implementing this one with ECC:
-  `/ecc:plan docs/use-cases/UC-XXX-<slug>.md`, with the real path of the use case.
+  `/ecc:plan specs/use-cases/UC-XXX-<slug>.md`, with the real path of the use case.

@@ -33,7 +33,7 @@ or the report: name the setting and where it is, never its value.
 ## 1. Read and pick the context
 
 - `PRODUCT.md`. When it is missing, stop and suggest `/kickoff`: it reads the README and the source tree.
-- `docs/glossary.md`, the entity model, the use case files, and `docs/use-cases/README.md`, when they exist.
+- `specs/glossary.md`, the entity model, the use case files, and `specs/use-cases/README.md`, when they exist.
 - How the codebase is cut into contexts (build modules, feature packages or folders, database schemas), and how often
   each changed: `git log --since=6.months.ago --name-only`.
 
@@ -86,7 +86,7 @@ formats are those of the other SpecShip skills; their paths are relative to this
 - A rule the code applies ends with its source instead of a BR: `Enterprise customers get 10% off above 50,000,000
   a month (code: LegacyBillingHelper.applyEnterpriseDiscount)`.
 
-**Use cases.** One file per use case at `docs/use-cases/UC-XXX-<slug>.md`, numbered on from the highest existing
+**Use cases.** One file per use case at `specs/use-cases/UC-XXX-<slug>.md`, numbered on from the highest existing
 `UC-XXX` file, in the template of section 3 of `../breakdown/SKILL.md`, with every section filled in as section 3 of
 `../use-case-spec/SKILL.md` describes. With these differences:
 
@@ -107,7 +107,7 @@ formats are those of the other SpecShip skills; their paths are relative to this
 
 - History: `v1 ({YYYY-MM-DD}, {author}): reverse-engineered from code`.
 
-**Diagram.** `docs/use-cases/README.md` in the format of section 3 of `../use-case-diagram/SKILL.md`, with the actor
+**Diagram.** `specs/use-cases/README.md` in the format of section 3 of `../use-case-diagram/SKILL.md`, with the actor
 names `PRODUCT.md` Users gives. Draw a role that `PRODUCT.md` does not list, and tell the user to add it with
 `/kickoff`.
 
